@@ -1,0 +1,59 @@
+<h2 style="background-color: yellow;">Parent Component</h2>
+
+<p>================</p>
+<h4 style="background-color: lightblue;">Input Property</h4>
+<p>================</p>
+
+<div style="margin-left: 20px;">
+    <p><b>Parent Bool PropertyName:</b> passDataFromParentToChild_Bool</p>
+    <p><b>Parent Bool Value:</b> {{passDataFromParentToChild_Bool}}</p>
+
+    <p>=================================================================================================</p>
+
+    <p><b>Parent String PropertyName:</b> passDataFromParentToChild_String</p>
+    <p><b>Parent String Value:</b> {{passDataFromParentToChild_String}}</p>
+</div>
+
+<p>==========================</p>
+<h4 style="background-color: lightblue;">Input Property With Alias</h4>
+<p>==========================</p>
+
+<div style="margin-left: 20px;">
+    <p><b>Parent String PropertyName:</b> passDataFromParentToChild_With_Input_Alias_String</p>
+    <p><b>Parent String Value:</b> {{passDataFromParentToChild_With_Input_Alias_String}}</p>
+</div>
+
+<br/>
+
+<!-- <div>
+    <button type="button" (click)="passDataFromParentToChild_Bool = !passDataFromParentToChild_Bool">Show Child String Value</button>
+</div> -->
+
+<p>==========================</p>
+<h4 style="background-color: lightblue;">Output Property</h4>
+<p>==========================</p>
+
+<div style="margin-left: 20px;">
+    <p><b>Parent String PropertyName:</b> getDataFromChildToParent_String</p>
+    <p><b>Parent String Value:</b> {{getDataFromChildToParent_String}}</p>
+</div>
+
+<p>==========================</p>
+<h4 style="background-color: lightblue;">Output Property With Alias</h4>
+<p>==========================</p>
+
+<div style="margin-left: 20px;">
+    <p><b>Parent String PropertyName:</b> getDataFromChildToParent_String_With_Output_Alias</p>
+    <p><b>Parent String Value:</b> {{getDataFromChildToParent_String_With_Output_Alias}}</p>
+</div>
+
+<br/>
+
+<div style="margin-left: 50px;">
+    <app-child-comp [boolInputProperty2]="passDataFromParentToChild_Bool" 
+                    [strInputProperty1]="passDataFromParentToChild_String"
+                    [strInputProperty3_With_Alias]="passDataFromParentToChild_With_Input_Alias_String"
+                    (eventForPassDataFromChildToParent)="parentMethodCall($event)"
+                    (eventForPassDataFromChildToParent_With_Alias)="parentMethodCall1($event)">
+    </app-child-comp>
+</div>

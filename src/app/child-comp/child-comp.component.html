@@ -1,0 +1,51 @@
+<h3 style="background-color: yellow;">Child Component</h3>
+
+<p>================</p>
+<h4 style="background-color: lightblue;">Input Property</h4>
+<p>================</p>
+
+<div style="margin-left: 20px;">
+    <p><b>Child Bool PropertyName:</b> boolInputProperty2</p>
+    <p><b>Child Bool Value:</b> {{boolInputProperty2}}</p>
+
+    <p>=================================================================================================</p>
+
+    <p><b>Child String PropertyName:</b> strInputProperty1</p>
+    <p><b>Child String Value:</b> {{strInputProperty1}}</p>
+</div>
+
+<p>==========================</p>
+<h4 style="background-color: lightblue;">Input Property With Alias</h4>
+<p><b>NOTE: In Child Component Template, you must use original Property Name instead of Alias of Property Name</b></p> 
+<p>==========================</p>
+
+<div style="margin-left: 20px;">
+    <p><b>Child String Original PropertyName:</b> strInputProperty3</p>
+    <p><b>Child String Original Value:</b> {{ strInputProperty3 }}</p>
+    <p><b>Child String Alias PropertyName:</b> strInputProperty3_With_Alias</p>
+    <p><b>Child String Alias Value:</b> Throw Error like: Property 'strInputProperty3_With_Alias' does not exist 
+        on type 'ChildCompComponent'.</p>
+</div>
+
+<br/>
+
+<!-- <p *ngIf="boolInputProperty2" >From Parent To Child Value: {{ strInputProperty1 }}</p>
+<p *ngIf="boolInputProperty2" >From Parent To Child Value With Input Alias: {{ strInputProperty3_With_Alias }}</p>
+<p *ngIf="boolInputProperty2" >From Parent To Child Value With Input Alias (Original Property Name): {{ strInputProperty3 }}</p> -->
+
+
+<p>==========================</p>
+<h4 style="background-color: lightblue;">Output Property</h4>
+<p>==========================</p>
+
+<div style="margin-left: 20px;">
+    <button type="button" (click)="onButtonClick()">Child Component Button (Pass Data From Child To Parent)</button>
+</div>
+
+<p>==========================</p>
+<h4 style="background-color: lightblue;">Output Property With Alias</h4>
+<p>==========================</p>
+
+<div style="margin-left: 20px;">
+    <button type="button" (click)="onButtonWithAliasClick()">Child Component Button (Pass Data From Child To Parent With Alias)</button>
+</div>
